@@ -1,0 +1,92 @@
+﻿<%--Basic Website with Data 
+    Jeffrey Martin--%>
+
+<%@ Master Language="VB" AutoEventWireup="true" CodeFile="Site.master.vb" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <%--   Concatinates the Page.Title with Northwind on the Tabs of the browser--%>
+    <title><%: Page.Title %> - Northwind</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <%--This links up the stylesheets to the pages.--%>
+    <link href="Content/Products.css" rel="stylesheet" />
+    <link href="Content/Customers.css" rel="stylesheet" />
+    <link href="Content/Home.css" rel="stylesheet" />
+    <link href="Content/Suppliers.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <%--Navigation Bar on the top of each page. While this is in the body of the webpage, stylisticly it acts as the heading of each page.--%>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <%--When the text here is clicked it will navigate to the default page.--%>
+                    <a class="navbar-brand" runat="server" href="~/">Northwind</a>
+                </div>
+                <div class="navbar-collapse collapse">
+
+                    <%--List of pages in the navigation bar to be navigated to when clicked on.--%>
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/Customers">Customers</a></li>
+                        <li><a runat="server" href="~/Products">Products</a></li>
+                        <li><a runat="server" href="~/Suppliers">Suppliers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+
+            <%--This is what will appear on the bottom of each page, the footer--%>
+            <footer>
+                <p>  <img alt="" src="Images/Northwind.jpg" /> &copy; <%: DateTime.Now.Year %> Jeffrey Martin</p>
+            </footer>
+
+        </div>
+    </form>
+</body>
+</html>

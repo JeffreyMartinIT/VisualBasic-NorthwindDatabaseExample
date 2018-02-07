@@ -1,0 +1,72 @@
+﻿/*Basic Website with Data - Project4
+    CIS 212 Advanced visual Basic
+    Jeffrey Martin
+
+    This CSS is designed to be used with the Suppliers.aspx page.
+*/
+
+
+/*ID CSS*/
+
+
+#Suppliers /*Everything on the page except for the heading and footer is in the Suppliers Div*/
+{
+    color:darkblue;
+}
+
+#Suppliers h2 
+{
+        font-weight: bolder;
+        page-break-after: avoid;
+        color:darkslateblue;
+        font-family:fantasy;
+}
+
+#Suppliers p 
+{
+    font-family:'Century Gothic';
+}
+
+
+/*Class CSS*/
+
+
+.SuppliersGridView  /*Generic CssClass For GridView.*/
+{
+    color: #5D7B9D;
+    border-color: black;
+    padding: 4px;
+    color: #333333;
+}
+
+.SuppliersGridView th
+{
+        padding: 10px;
+}
+
+.SuppliersGridView td
+{
+        padding: 5px;
+}
+
+.headerSuppliers /*Used in HeaderStyle-CssClass, which is a specialized Css Class used in Gridview*/
+{
+    background-color:coral;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    text-align: center;
+}
+
+.rowsSuppliers /*Used in RowStyle-CssClass, which is a specialized Css Class used in Gridview*/ 
+{
+    background-color: blanchedalmond;
+    font-family: Arial;
+    color: black;
+}
+
+.rowsAlternatingSuppliers /*Used in AlternatingRowStyle-CssClass, which is a specialized Css Class used in Gridview*/ 
+{
+    color: #284775;
+    background-color: burlywood;
+}

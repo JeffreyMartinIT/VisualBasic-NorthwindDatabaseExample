@@ -1,0 +1,66 @@
+﻿/*Basic Website with Data - Project4
+    CIS 212 Advanced visual Basic
+    Jeffrey Martin
+
+    This CSS is designed to be used with the Customers.aspx page.
+*/
+
+/*ID CSS*/
+
+#Customers /*Everything on the page except for the heading and footer is in the Customers Div*/
+{ 
+    color:darkgreen;
+}
+
+#Customers h2 
+{
+    font-family:Algerian; 
+    font-weight: bolder;
+    page-break-after: avoid;
+      color:green;
+}
+
+#Customers p 
+{
+        color: black;
+}
+
+
+/*Class CSS*/
+
+
+.CustomerGridView /*Generic CssClass For GridView.*/ 
+{
+    border-color: black;
+}
+
+.CustomerGridView th 
+{
+        padding: 10px;
+}
+
+.CustomerGridView td 
+{
+        padding: 5px;
+}
+
+.headerCustomers /*Used in HeaderStyle-CssClass, which is a specialized Css Class used in Gridview*/ 
+{
+    background-color: #0099CC;
+    font-family: 'Bernard MT';
+    font-size: larger;
+}
+
+.rowsCustomers /*Used in RowStyle-CssClass, which is a specialized Css Class used in Gridview*/ 
+{
+    background-color: #CCFFFF;
+    font-family: 'Times New Roman';
+    color: black;
+}
+
+.rowsAlternatingCustomers /*Used in AlternatingRowStyle-CssClass, which is a specialized Css Class used in Gridview*/ 
+{
+    color: black;
+    font-family: 'Times New Roman';
+    background-color: #B0C4DE;
+}

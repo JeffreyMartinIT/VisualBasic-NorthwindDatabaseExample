@@ -1,0 +1,26 @@
+﻿/*Basic Website with Data - Project4
+    CIS 212 Advanced visual Basic
+    Jeffrey Martin
+
+    This CSS is designed to be used with the Default.aspx page.
+*/
+
+/*ID CSS*/
+
+
+#Home /*Everything on the page except for the heading and footer is in the Home Div*/
+{
+    color:darkblue;
+}
+
+#Home p 
+{
+    color:darkturquoise;
+    font-weight:bold;
+}
+
+#Home h1
+{
+    font-weight:bolder;
+    font-size:46px;
+}
